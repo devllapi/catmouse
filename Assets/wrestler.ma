@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: wrestler.ma
-//Last modified: Tue, Nov 08, 2016 12:28:22 PM
+//Last modified: Tue, Nov 08, 2016 01:12:24 PM
 //Codeset: 1252
 requires maya "2016";
 currentUnit -l centimeter -a degree -t film;
@@ -13,8 +13,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "1E8619CC-4349-5DE4-D1AE-7AA4A030C7C5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.39718944168978609 12.577403784847446 25.499461075154656 ;
-	setAttr ".r" -type "double3" -26.738352729615542 3.3999999999994839 0 ;
+	setAttr ".t" -type "double3" -0.32760596772829853 11.159750015449264 26.201253938909488 ;
+	setAttr ".r" -type "double3" -23.738352729603417 1.799999999997606 -2.4860350531207598e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "961CAE4E-4884-1BA4-9DB1-2D87CAA0290D";
 	setAttr -k off ".v" no;
