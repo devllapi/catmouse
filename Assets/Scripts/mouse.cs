@@ -15,13 +15,13 @@ public class mouse : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		directionToCat = cat.position - transform.position;
-		if (Vector3.Angle (transform.forward, directionToCat) < 180f) {
+		if (Vector3.Angle (transform.forward, directionToCat) < 150f) {
 			Ray mouseRay = new Ray (transform.position, directionToCat);
 			RaycastHit mouseRayHitInfo;
 			if(Physics.Raycast(mouseRay, out mouseRayHitInfo, 25f)){
 				//Debug.DrawRay (mouseRay.origin, mouseRay.direction * 100f, Color.red);
 				if(mouseRayHitInfo.collider.tag=="Cat"){
-					rb.AddForce (-directionToCat.normalized * 300f);
+					rb.AddForce (-directionToCat.normalized * 600f);
 					run.Play ();
 					Debug.Log ("fear");
 				}
