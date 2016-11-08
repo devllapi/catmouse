@@ -26,7 +26,7 @@ public class cat : MonoBehaviour {
 						Destroy (mouse.gameObject);
 						Debug.Log ("chase");
 					} else {
-						rb.AddForce (directionToMouse.normalized * 250f);
+						rb.AddForce (directionToMouse.normalized * 100f);
 					}
 				}
 			}
