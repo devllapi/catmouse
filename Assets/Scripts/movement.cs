@@ -17,7 +17,7 @@ public class movement : MonoBehaviour {
 		//RaycastHit hit;
 		rb.velocity = transform.forward * 10f + Physics.gravity;
 		Ray moveRay = new Ray (transform.position, transform.forward);
-		if(Physics.SphereCast(moveRay,1f, 1f)){
+		if(Physics.SphereCast(moveRay,.5f, .5f)){
 			Debug.DrawRay(moveRay.origin, moveRay.direction*1000f, Color.yellow);
 			if (turn > .5f) {
 				transform.Rotate (0f, 90f, 0f);	

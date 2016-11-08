@@ -20,7 +20,7 @@ public class mouse : MonoBehaviour {
 			if(Physics.Raycast(mouseRay, out mouseRayHitInfo, 25f)){
 				Debug.DrawRay (mouseRay.origin, mouseRay.direction * 100f, Color.red);
 				if(mouseRayHitInfo.collider.tag=="Cat"){
-					rb.AddForce (-directionToCat.normalized * 500f);
+					rb.AddForce (-directionToCat.normalized * 300f);
 					Debug.Log ("fear");
 				}
 				

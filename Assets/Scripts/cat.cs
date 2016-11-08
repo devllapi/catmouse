@@ -22,9 +22,11 @@ public class cat : MonoBehaviour {
 			if (Physics.Raycast (catRay, out catRayHitInfo, 25f)) {
 				Debug.DrawRay (catRay.origin, catRay.direction * 100f, Color.blue);
 				if (catRayHitInfo.collider.tag == "Mouse") {
-					if (catRayHitInfo.distance <= 5f) {
-						rb.AddForce (directionToMouse.normalized * 500f);
+					if (catRayHitInfo.distance <= 1f) {
+						Destroy (mouse.gameObject);
 						Debug.Log ("chase");
+					} else {
+						rb.AddForce (directionToMouse.normalized * 250f);
 					}
 				}
 			}
