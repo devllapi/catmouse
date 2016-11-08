@@ -17,10 +17,10 @@ public class mouse : MonoBehaviour {
 		if (Vector3.Angle (transform.forward, directionToCat) < 180f) {
 			Ray mouseRay = new Ray (transform.position, directionToCat);
 			RaycastHit mouseRayHitInfo;
-			if(Physics.Raycast(mouseRay, out mouseRayHitInfo, 50f)){
+			if(Physics.Raycast(mouseRay, out mouseRayHitInfo, 25f)){
 				Debug.DrawRay (mouseRay.origin, mouseRay.direction * 100f, Color.red);
 				if(mouseRayHitInfo.collider.tag=="Cat"){
-					rb.AddForce (-directionToCat.normalized * 1000f);
+					rb.AddForce (-directionToCat.normalized * 500f);
 					Debug.Log ("fear");
 				}
 				
